@@ -1,6 +1,6 @@
 {
   "name": "@onesamket/rn-toast",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A beautiful toast notification library for React Native",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
