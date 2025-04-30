@@ -1,4 +1,4 @@
-# RN-Toast
+# @onesamket/rn-toast
 
 A beautiful toast notification library for React Native and Expo applications.
 
@@ -16,9 +16,9 @@ A beautiful toast notification library for React Native and Expo applications.
 ## Installation
 
 ```bash
-npm install rn-toast
+npm install @onesamket/rn-toast
 # or
-yarn add rn-toast
+yarn add @onesamket/rn-toast
 ```
 
 ### Peer Dependencies
@@ -38,7 +38,7 @@ yarn add expo-blur expo-haptics @expo/vector-icons react-native-safe-area-contex
 Wrap your application with the `ToastProvider`:
 
 ```jsx
-import { ToastProvider } from 'rn-toast';
+import { ToastProvider } from '@onesamket/rn-toast';
 
 export default function App() {
   return (
@@ -52,7 +52,7 @@ export default function App() {
 ### Basic Usage
 
 ```jsx
-import { useToast } from 'rn-toast';
+import { useToast } from '@onesamket/rn-toast';
 
 function MyComponent() {
   const toast = useToast();
@@ -171,3 +171,19 @@ The `useToast` hook returns an object with the following methods:
 ## License
 
 MIT
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Acknowledgements
+
+This library was built with React Native and Expo, and was inspired by the need for a simple, customizable toast notification system for React Native applications.
+
+## Version History
+
+### 0.1.0
+- Initial release
+- Basic toast functionality with various variants
+- Support for promise-based toasts
+- Customizable appearance and behavior
