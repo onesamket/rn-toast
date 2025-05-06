@@ -1,3 +1,7 @@
-export { ToastProvider, useToast } from './context/toast-context';
-export type { Toast, ToastVariant, ToastAction, ToastPromise, ToastContextType } from './types/index';
-export { default as ToastComponent } from './components/toast';
+export { ToastProvider, useToast } from "./context/toast-context"
+export type { Toast, ToastVariant, ToastAction, ToastPromise, ToastContextType, SocialData } from "./types/index"
+export { ToastActions } from "./types/index"
+export { default as ToastComponent } from "./components/toast"
+export { AvatarGroup, type AvatarGroupProps } from "./components/avatar-group"
+export { Avatar, type AvatarProps } from "./components/avatar"
+export { ToastActionButton } from "./components/toast-action-button"

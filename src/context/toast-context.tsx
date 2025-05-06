@@ -116,6 +116,71 @@ export function ToastProvider({ children }: { children: React.ReactNode }): JSX.
     [createToast]
   );
 
+  // Social media notification methods
+  const mention = useCallback(
+    (options: Omit<Toast, 'id' | 'variant'>) => {
+      return createToast({ ...options, variant: 'mention' });
+    },
+    [createToast]
+  );
+
+  const reaction = useCallback(
+    (options: Omit<Toast, 'id' | 'variant'>) => {
+      return createToast({ ...options, variant: 'reaction' });
+    },
+    [createToast]
+  );
+
+  const follow = useCallback(
+    (options: Omit<Toast, 'id' | 'variant'>) => {
+      return createToast({ ...options, variant: 'follow' });
+    },
+    [createToast]
+  );
+
+  const repost = useCallback(
+    (options: Omit<Toast, 'id' | 'variant'>) => {
+      return createToast({ ...options, variant: 'repost' });
+    },
+    [createToast]
+  );
+
+  const message = useCallback(
+    (options: Omit<Toast, 'id' | 'variant'>) => {
+      return createToast({ ...options, variant: 'message' });
+    },
+    [createToast]
+  );
+
+  // System notification methods
+  const connection = useCallback(
+    (options: Omit<Toast, 'id' | 'variant'>) => {
+      return createToast({ ...options, variant: 'connection' });
+    },
+    [createToast]
+  );
+
+  const battery = useCallback(
+    (options: Omit<Toast, 'id' | 'variant'>) => {
+      return createToast({ ...options, variant: 'battery' });
+    },
+    [createToast]
+  );
+
+  const update = useCallback(
+    (options: Omit<Toast, 'id' | 'variant'>) => {
+      return createToast({ ...options, variant: 'update' });
+    },
+    [createToast]
+  );
+
+  const maintenance = useCallback(
+    (options: Omit<Toast, 'id' | 'variant'>) => {
+      return createToast({ ...options, variant: 'maintenance' });
+    },
+    [createToast]
+  );
+
   const contextValue = useMemo(
     () => ({
       toast,
@@ -127,8 +192,23 @@ export function ToastProvider({ children }: { children: React.ReactNode }): JSX.
       warning,
       info,
       custom,
+      // Social media notification methods
+      mention,
+      reaction,
+      follow,
+      repost,
+      message,
+      // System notification methods
+      connection,
+      battery,
+      update,
+      maintenance,
     }),
-    [toast, dismissToast, promise, loading, success, error, warning, info, custom]
+    [
+      toast, dismissToast, promise, loading, success, error, warning, info, custom,
+      mention, reaction, follow, repost, message,
+      connection, battery, update, maintenance
+    ]
   );
 
   return (
